@@ -404,7 +404,7 @@ section.sub article div.title img {
   height: 100%;
 }
 section.sub article div.title-sub {
-  font-size: 45px;
+  font-size: 36px;
   font-weight: 400;
   margin-bottom: 170px;
 }
@@ -639,7 +639,7 @@ section.sub.prod-2 article div.tag {
   background: #043174;
 }
 section.sub.prod-2 article div.title {
-  height: 232px;
+  height: 180px;
 }
 section.sub.prod-2 article div.title-sub {
   color: #043174;
