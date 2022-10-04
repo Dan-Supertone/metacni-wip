@@ -1,9 +1,9 @@
 @mixin mobile
-  @media (max-width: 900px)
+  @media (max-width: 1000px)
     @content
 
 @mixin tablet
-  @media (min-width: 901px) and (max-width: 1279px)
+  @media (max-width: 1279px)
     @content
 
 @mixin desktop
@@ -37,6 +37,10 @@ a, a:hover, a:visited
 
 input:focus
   outline: none
+
+br.only-m
+  @include desktop
+    display: none
 
 section
   position: relative
@@ -96,6 +100,25 @@ footer
     width: 50vw
     height: 100%
     background: #FFE1C9
+@include mobile
+  footer
+    height: 240px
+    article
+      div.footer-inner
+        &:nth-child(1)
+          div.logo-wrap
+            top: 30px
+            left: 30px
+            height: 24px
+          div.copyright
+            bottom: 30px
+            left: 30px
+            font-size: 10px
+        &:nth-child(2)
+          div.info
+            bottom: 30px
+            right: 30px
+            font-size: 12px
 
 section.main
   position: relative
@@ -151,6 +174,23 @@ section.main
         color: #fff
         text-align: center
         text-shadow: 0px 20px 50px rgba(0, 0, 0, 1)
+@include mobile
+  section.main
+    height: 600px
+    article
+      div.logo-wrap
+        top: 40px
+        left: 40px
+        height: 32px
+      div.main-bg-1
+        p
+          bottom: 80px
+          right: 40px
+          font-size: 36px
+      div.main-bg-2
+        p
+          font-size: 40px
+          text-shadow: 0px 14px 30px rgba(0, 0, 0, 1)
 
 section.what-we-do
   background: #F0F0F0
@@ -209,6 +249,30 @@ section.what-we-do
           p
             font-size: 16px
             font-weight: 300
+@include tablet
+  section.what-we-do
+    article
+      div.block-wrap
+        flex-flow: column nowrap
+        a:nth-child(2)
+          div.block
+            margin: 40px auto
+        div.block
+          width: 100%
+          max-width: 700px
+          margin-left: auto
+          margin-right: auto
+          div.block-inner
+            bottom: 0
+@include mobile
+  section.what-we-do
+    article
+      padding: 120px 40px
+      div.title
+        font-size: 20px
+        width: 170px
+      div.text
+        font-size: 24px
 
 section.contact
   position: relative
@@ -258,33 +322,43 @@ section.contact
     transition: opacity 3s
     &.active
       opacity: 1
+@include mobile
+  section.contact
+    height: 600px
+    div.text
+      top: 80px
+      font-size: 28px
+    a.contact-us
+      bottom: 50px
+      width: 160px
+      font-size: 22px
 
 section.sub
   background: #DDDDDD
   article
-    padding: 344px 0 204px 0
+    padding: 344px 120px 204px 120px
     text-align: center
     div.logo-wrap
       position: absolute
       top: 50px
-      left: 120px
+      left: 56px
       height: 30px
       img
         height: 100%
     div.tag
       position: absolute
-      top: 90px
-      right: 120px
-      width: 286px
-      height: 70px
-      padding-top: 7px
-      font-size: 38px
+      top: 110px
+      right: 50px
+      width: 260px
+      height: 60px
+      padding-top: 11px
+      font-size: 26px
       font-weight: 700
       text-align: center
       color: #fff
       background: #082AB7
     div.title
-      height: 98px
+      height: 76px
       margin-bottom: 76px
       img
         height: 100%
@@ -292,6 +366,43 @@ section.sub
       font-size: 45px
       font-weight: 400
       margin-bottom: 170px
+@include mobile
+  section.sub
+    article
+      padding: 200px 40px 120px 40px
+      div.logo-wrap
+        top: 40px
+        left: 40px
+        height: 20px
+      div.tag
+        top: 90px
+        right: 40px
+        width: 180px
+        height: 44px
+        padding-top: 9px
+        font-size: 18px
+      div.title
+        width: 100%
+        height: auto
+      div.title-sub
+        font-size: 20px
+        margin-bottom: 90px
+
+section.sub.soc-1
+  article
+    div.title
+      margin-bottom: 176px
+    div.box-soc-1-1
+      width: 100%
+      padding: 0 40px
+      margin: 0 auto 90px auto
+      @include mobile
+        padding: 0 0px
+@include mobile
+  section.sub.soc-1
+    article
+      div.title
+        margin-bottom: 90px
 
 section.sub.soc-2
   background: #F0F0F0
@@ -299,48 +410,142 @@ section.sub.soc-2
     div.tag
       background: #0056A0
     div.title
-      font-size: 88px
+      font-size: 74px
       font-weight: 400
       color: #000
       margin-bottom: 328px
     div.sub-title
-      font-size: 45px
+      font-size: 38px
       font-weight: 700
       color: #A50000
       border-bottom: solid 3px #A50000
-      padding-bottom: 8px
-      width: 740px
+      padding-bottom: 16px
+      width: 570px
+      &.soc-2-2
+        width: 990px
+        margin-bottom: 160px
+    div.box-soc-2-1
+      position: relative
+      width: 100%
+      margin-bottom: 174px
+      p
+        position: absolute
+        top: 22px
+        left: 24px
+        font-size: 24px
+        font-weight: 400
+        text-align: left
+    div.box-soc-2-2
+      width: 100%
+      margin-bottom: 400px
+    div.box-soc-2-3
+      width: 100%
+      margin-bottom: 90px
     div.img-soc-2-1
       width: 100%
       img
         width: 100%
+@include mobile
+  section.sub.soc-2
+    article
+      div.title
+        font-size: 32px
+        margin-bottom: 90px
+      div.sub-title
+        font-size: 18px
+        width: 300px
+        margin-bottom: 40px
+        &.soc-2-2
+          width: 300px
+          margin-bottom: 20px
+      div.box-soc-2-1
+        margin-bottom: 40px
+        p
+          top: -20px
+          font-size: 12px
+      div.box-soc-2-2
+        margin-bottom: 100px
 
 section.sub.ip-1
   background: #E3E3E3
   article
     div.tag
       background: #525252
+    p.p-1
+      font-size: 38px
+      font-weight: 700
+      margin: 0 auto 118px auto
+    p.p-2
+      font-size: 38px
+      font-weight: 700
+      margin: 0 auto 366px auto
+    img.img-1
+      margin: 0 auto 140px auto
+    img.img-2
+      margin: 0 auto 54px auto
+    img.img-3
+      margin: 0 auto 54px auto
+    img.img-4
+      margin: 0 auto 320px auto
+    img.img-5
+      margin: 0 auto 300px auto
+@include mobile
+  section.sub.ip-1
+    article
+      p.p-1
+        font-size: 20px
+        margin-bottom: 40px
+      p.p-2
+        font-size: 20px
+        margin-bottom: 60px
+      img.img-1
+        margin: 0 auto 40px auto
+      img.img-2
+        margin: 0 auto 20px auto
+      img.img-3
+        margin: 0 auto 20px auto
+      img.img-4
+        margin: 0 auto 40px auto
+      img.img-5
+        margin: 0 auto 40px auto
 
 section.sub.ip-2
   background: #F0F0F0
   article
     div.tag
       background: #0056A0
+    div.title
+      margin-bottom: 160px
+      @include mobile
+        margin-bottom: 80px
+      p
+        font-size: 45px
+        font-weight: 500px
+        color: #003174
+        margin-top: 14px
+        @include mobile
+          font-size: 20px
+          margin-top: 7px
 
 section.sub.prod-1
   background: #EAEAEA
   article
     div.tag
-      width: 340px
+      width: 320px
       background: #183182
     div.title-sub
       color: #183182
+@include mobile
+  section.sub.prod-1
+    article
+      div.tag
+        width: 200px
 
 section.sub.prod-2
   background: #DEDEDE
   article
     div.tag
-      height: 120px
+      height: 95px
       background: #043174
     div.title
       height: 232px
@@ -349,3 +554,11 @@ section.sub.prod-2
       span
         font-weight: 700
         color: #A71F12
+@include mobile
+  section.sub.prod-2
+    article
+      div.tag
+        height: 68px
+      div.title
+        width: 100%
+        height: auto

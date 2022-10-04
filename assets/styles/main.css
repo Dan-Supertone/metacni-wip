@@ -29,6 +29,12 @@ input:focus {
   outline: none;
 }
 
+@media (min-width: 1280px) {
+  br.only-m {
+    display: none;
+  }
+}
+
 section {
   position: relative;
   width: 100%;
@@ -96,6 +102,26 @@ footer div.footer-background {
   background: #FFE1C9;
 }
 
+@media (max-width: 1000px) {
+  footer {
+    height: 240px;
+  }
+  footer article div.footer-inner:nth-child(1) div.logo-wrap {
+    top: 30px;
+    left: 30px;
+    height: 24px;
+  }
+  footer article div.footer-inner:nth-child(1) div.copyright {
+    bottom: 30px;
+    left: 30px;
+    font-size: 10px;
+  }
+  footer article div.footer-inner:nth-child(2) div.info {
+    bottom: 30px;
+    right: 30px;
+    font-size: 12px;
+  }
+}
 section.main {
   position: relative;
   height: 1080px;
@@ -158,6 +184,25 @@ section.main article div.main-bg-2 p {
   text-shadow: 0px 20px 50px black;
 }
 
+@media (max-width: 1000px) {
+  section.main {
+    height: 600px;
+  }
+  section.main article div.logo-wrap {
+    top: 40px;
+    left: 40px;
+    height: 32px;
+  }
+  section.main article div.main-bg-1 p {
+    bottom: 80px;
+    right: 40px;
+    font-size: 36px;
+  }
+  section.main article div.main-bg-2 p {
+    font-size: 40px;
+    text-shadow: 0px 14px 30px black;
+  }
+}
 section.what-we-do {
   background: #F0F0F0;
 }
@@ -224,6 +269,35 @@ section.what-we-do article div.block-wrap div.block div.block-inner p {
   font-weight: 300;
 }
 
+@media (max-width: 1279px) {
+  section.what-we-do article div.block-wrap {
+    flex-flow: column nowrap;
+  }
+  section.what-we-do article div.block-wrap a:nth-child(2) div.block {
+    margin: 40px auto;
+  }
+  section.what-we-do article div.block-wrap div.block {
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.what-we-do article div.block-wrap div.block div.block-inner {
+    bottom: 0;
+  }
+}
+@media (max-width: 1000px) {
+  section.what-we-do article {
+    padding: 120px 40px;
+  }
+  section.what-we-do article div.title {
+    font-size: 20px;
+    width: 170px;
+  }
+  section.what-we-do article div.text {
+    font-size: 24px;
+  }
+}
 section.contact {
   position: relative;
   height: 1080px;
@@ -279,17 +353,31 @@ section.contact div.contact-bg-2.active {
   opacity: 1;
 }
 
+@media (max-width: 1000px) {
+  section.contact {
+    height: 600px;
+  }
+  section.contact div.text {
+    top: 80px;
+    font-size: 28px;
+  }
+  section.contact a.contact-us {
+    bottom: 50px;
+    width: 160px;
+    font-size: 22px;
+  }
+}
 section.sub {
   background: #DDDDDD;
 }
 section.sub article {
-  padding: 344px 0 204px 0;
+  padding: 344px 120px 204px 120px;
   text-align: center;
 }
 section.sub article div.logo-wrap {
   position: absolute;
   top: 50px;
-  left: 120px;
+  left: 56px;
   height: 30px;
 }
 section.sub article div.logo-wrap img {
@@ -297,19 +385,19 @@ section.sub article div.logo-wrap img {
 }
 section.sub article div.tag {
   position: absolute;
-  top: 90px;
-  right: 120px;
-  width: 286px;
-  height: 70px;
-  padding-top: 7px;
-  font-size: 38px;
+  top: 110px;
+  right: 50px;
+  width: 260px;
+  height: 60px;
+  padding-top: 11px;
+  font-size: 26px;
   font-weight: 700;
   text-align: center;
   color: #fff;
   background: #082AB7;
 }
 section.sub article div.title {
-  height: 98px;
+  height: 76px;
   margin-bottom: 76px;
 }
 section.sub article div.title img {
@@ -321,6 +409,51 @@ section.sub article div.title-sub {
   margin-bottom: 170px;
 }
 
+@media (max-width: 1000px) {
+  section.sub article {
+    padding: 200px 40px 120px 40px;
+  }
+  section.sub article div.logo-wrap {
+    top: 40px;
+    left: 40px;
+    height: 20px;
+  }
+  section.sub article div.tag {
+    top: 90px;
+    right: 40px;
+    width: 180px;
+    height: 44px;
+    padding-top: 9px;
+    font-size: 18px;
+  }
+  section.sub article div.title {
+    width: 100%;
+    height: auto;
+  }
+  section.sub article div.title-sub {
+    font-size: 20px;
+    margin-bottom: 90px;
+  }
+}
+section.sub.soc-1 article div.title {
+  margin-bottom: 176px;
+}
+section.sub.soc-1 article div.box-soc-1-1 {
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto 90px auto;
+}
+@media (max-width: 1000px) {
+  section.sub.soc-1 article div.box-soc-1-1 {
+    padding: 0 0px;
+  }
+}
+
+@media (max-width: 1000px) {
+  section.sub.soc-1 article div.title {
+    margin-bottom: 90px;
+  }
+}
 section.sub.soc-2 {
   background: #F0F0F0;
 }
@@ -328,18 +461,43 @@ section.sub.soc-2 article div.tag {
   background: #0056A0;
 }
 section.sub.soc-2 article div.title {
-  font-size: 88px;
+  font-size: 74px;
   font-weight: 400;
   color: #000;
   margin-bottom: 328px;
 }
 section.sub.soc-2 article div.sub-title {
-  font-size: 45px;
+  font-size: 38px;
   font-weight: 700;
   color: #A50000;
   border-bottom: solid 3px #A50000;
-  padding-bottom: 8px;
-  width: 740px;
+  padding-bottom: 16px;
+  width: 570px;
+}
+section.sub.soc-2 article div.sub-title.soc-2-2 {
+  width: 990px;
+  margin-bottom: 160px;
+}
+section.sub.soc-2 article div.box-soc-2-1 {
+  position: relative;
+  width: 100%;
+  margin-bottom: 174px;
+}
+section.sub.soc-2 article div.box-soc-2-1 p {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+}
+section.sub.soc-2 article div.box-soc-2-2 {
+  width: 100%;
+  margin-bottom: 400px;
+}
+section.sub.soc-2 article div.box-soc-2-3 {
+  width: 100%;
+  margin-bottom: 90px;
 }
 section.sub.soc-2 article div.img-soc-2-1 {
   width: 100%;
@@ -348,36 +506,136 @@ section.sub.soc-2 article div.img-soc-2-1 img {
   width: 100%;
 }
 
+@media (max-width: 1000px) {
+  section.sub.soc-2 article div.title {
+    font-size: 32px;
+    margin-bottom: 90px;
+  }
+  section.sub.soc-2 article div.sub-title {
+    font-size: 18px;
+    width: 300px;
+    margin-bottom: 40px;
+  }
+  section.sub.soc-2 article div.sub-title.soc-2-2 {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  section.sub.soc-2 article div.box-soc-2-1 {
+    margin-bottom: 40px;
+  }
+  section.sub.soc-2 article div.box-soc-2-1 p {
+    top: -20px;
+    font-size: 12px;
+  }
+  section.sub.soc-2 article div.box-soc-2-2 {
+    margin-bottom: 100px;
+  }
+}
 section.sub.ip-1 {
   background: #E3E3E3;
 }
 section.sub.ip-1 article div.tag {
   background: #525252;
 }
+section.sub.ip-1 article p.p-1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0 auto 118px auto;
+}
+section.sub.ip-1 article p.p-2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0 auto 366px auto;
+}
+section.sub.ip-1 article img.img-1 {
+  margin: 0 auto 140px auto;
+}
+section.sub.ip-1 article img.img-2 {
+  margin: 0 auto 54px auto;
+}
+section.sub.ip-1 article img.img-3 {
+  margin: 0 auto 54px auto;
+}
+section.sub.ip-1 article img.img-4 {
+  margin: 0 auto 320px auto;
+}
+section.sub.ip-1 article img.img-5 {
+  margin: 0 auto 300px auto;
+}
 
+@media (max-width: 1000px) {
+  section.sub.ip-1 article p.p-1 {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  section.sub.ip-1 article p.p-2 {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+  section.sub.ip-1 article img.img-1 {
+    margin: 0 auto 40px auto;
+  }
+  section.sub.ip-1 article img.img-2 {
+    margin: 0 auto 20px auto;
+  }
+  section.sub.ip-1 article img.img-3 {
+    margin: 0 auto 20px auto;
+  }
+  section.sub.ip-1 article img.img-4 {
+    margin: 0 auto 40px auto;
+  }
+  section.sub.ip-1 article img.img-5 {
+    margin: 0 auto 40px auto;
+  }
+}
 section.sub.ip-2 {
   background: #F0F0F0;
 }
 section.sub.ip-2 article div.tag {
   background: #0056A0;
 }
+section.sub.ip-2 article div.title {
+  margin-bottom: 160px;
+}
+@media (max-width: 1000px) {
+  section.sub.ip-2 article div.title {
+    margin-bottom: 80px;
+  }
+}
+section.sub.ip-2 article div.title p {
+  font-size: 45px;
+  font-weight: 500px;
+  color: #003174;
+  margin-top: 14px;
+}
+@media (max-width: 1000px) {
+  section.sub.ip-2 article div.title p {
+    font-size: 20px;
+    margin-top: 7px;
+  }
+}
 
 section.sub.prod-1 {
   background: #EAEAEA;
 }
 section.sub.prod-1 article div.tag {
-  width: 340px;
+  width: 320px;
   background: #183182;
 }
 section.sub.prod-1 article div.title-sub {
   color: #183182;
 }
 
+@media (max-width: 1000px) {
+  section.sub.prod-1 article div.tag {
+    width: 200px;
+  }
+}
 section.sub.prod-2 {
   background: #DEDEDE;
 }
 section.sub.prod-2 article div.tag {
-  height: 120px;
+  height: 95px;
   background: #043174;
 }
 section.sub.prod-2 article div.title {
@@ -389,4 +647,14 @@ section.sub.prod-2 article div.title-sub {
 section.sub.prod-2 article div.title-sub span {
   font-weight: 700;
   color: #A71F12;
+}
+
+@media (max-width: 1000px) {
+  section.sub.prod-2 article div.tag {
+    height: 68px;
+  }
+  section.sub.prod-2 article div.title {
+    width: 100%;
+    height: auto;
+  }
 }
