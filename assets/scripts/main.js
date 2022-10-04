@@ -1,19 +1,22 @@
 
-/*
-window.addEventListener('scroll', function(){
+let imgTrans = false;
 
-  let winH = window.innerHeight;
-  let item = document.getElementById('contact');
-  let posFromTop = item.getBoundingClientRect().top;
-
-  let winHalf = winH * 0.5;
-  if (winHalf > posFromTop) {
-    item.classList.add('active');
-  }
+window.addEventListener('scroll', function() {
+  if (imgTrans == false) {
+    let itemMain = document.getElementById('main-bg');
+    let itemContact = document.getElementById('contact-bg');
+    let itemFooter = document.querySelector('footer');
+    let posFromTop = itemFooter.getBoundingClientRect().top;
+    let winH = window.innerHeight;
+    if (winH > posFromTop) {
+      itemMain.classList.add('active');
+      itemContact.classList.add('active');
+      imgTrans = true;
+    };
+  };
 });
-*/
 
-
+/*
 addEventListener("mousewheel", e => {
   let direction = e.deltaY > 0 ? "Scroll Down" : "Scroll Up";;
   let itemMain = document.getElementById('main-bg');
@@ -27,3 +30,4 @@ addEventListener("mousewheel", e => {
     itemContact.classList.remove('active');
   }
 });
+*/

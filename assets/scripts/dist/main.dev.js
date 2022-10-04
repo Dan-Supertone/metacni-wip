@@ -1,23 +1,30 @@
 "use strict";
 
-/*
-window.addEventListener('scroll', function(){
+var imgTrans = false;
+window.addEventListener('scroll', function () {
+  if (imgTrans == false) {
+    var itemMain = document.getElementById('main-bg');
+    var itemContact = document.getElementById('contact-bg');
+    var itemFooter = document.querySelector('footer');
+    var posFromTop = itemFooter.getBoundingClientRect().top;
+    var winH = window.innerHeight;
 
-  let winH = window.innerHeight;
-  let item = document.getElementById('contact');
-  let posFromTop = item.getBoundingClientRect().top;
+    if (winH > posFromTop) {
+      itemMain.classList.add('active');
+      itemContact.classList.add('active');
+      imgTrans = true;
+    }
 
-  let winHalf = winH * 0.5;
-  if (winHalf > posFromTop) {
-    item.classList.add('active');
+    ;
   }
-});
-*/
-addEventListener("mousewheel", function (e) {
-  var direction = e.deltaY > 0 ? "Scroll Down" : "Scroll Up";
+
   ;
-  var itemMain = document.getElementById('main-bg');
-  var itemContact = document.getElementById('contact-bg');
+});
+/*
+addEventListener("mousewheel", e => {
+  let direction = e.deltaY > 0 ? "Scroll Down" : "Scroll Up";;
+  let itemMain = document.getElementById('main-bg');
+  let itemContact = document.getElementById('contact-bg');
 
   if (e.deltaY > 0) {
     itemMain.classList.add('active');
@@ -27,3 +34,4 @@ addEventListener("mousewheel", function (e) {
     itemContact.classList.remove('active');
   }
 });
+*/

@@ -11,13 +11,15 @@ html
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
     link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap' rel='stylesheet')
+    script(src='https://code.jquery.com/jquery-latest.min.js')
   body
-    section.sub.prod-1
+    section.sub.prod-1#prod-1
       article
         div.logo-wrap
           a(href='../' target='_self')
             img(src='../assets/images/logo.png')
-        div.tag Mass production
+        a(href='#prod-2')
+          div.tag Mass production
         div.title
           img(src='../assets/images/title-production.svg')
         div.title-sub
@@ -26,12 +28,13 @@ html
           | 고객과 함께 성장합니다.
         img(src='../assets/images/img-prod-1.png' style='width: 100%; max-width: 1680px; margin: 0 auto;')
 
-    section.sub.prod-2
+    section.sub.prod-2#prod-2
       article
         div.logo-wrap
           a(href='../' target='_self')
             img(src='../assets/images/logo.png')
-        div.tag Production Solution
+        a(href='#prod-1')
+          div.tag Production Solution
         div.title
           img(src='../assets/images/title-massproduction.svg')
         div.title-sub
@@ -72,5 +75,5 @@ html
             | E. sales@metacni.com
       div.footer-background
 
-
-  script
+  script(src='../assets/scripts/smooth-scroll.js')
+  script(src='../assets/scripts/common.js')

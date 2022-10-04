@@ -11,24 +11,27 @@ html
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
     link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap' rel='stylesheet')
+    script(src='https://code.jquery.com/jquery-latest.min.js')
   body
-    section.sub.soc-1
+    section.sub.soc-1#soc-1
       article
         div.logo-wrap
           a(href='../' target='_self')
             img(src='../assets/images/logo.png')
-        div.tag 개발제품
+        a(href='#soc-2')
+          div.tag 개발제품
         div.title(style='margin-bottom: 176px')
           img(src='../assets/images/title-soc.svg')
         div(style='width: 100%; max-width: 1368px; margin: 0 auto;')
           img(src='../assets/images/img-soc-1.svg' width='100%')
 
-    section.sub.soc-2
+    section.sub.soc-2#soc-2
       article
         div.logo-wrap
           a(href='../' target='_self')
             img(src='../assets/images/logo.png')
-        div.tag MetaEco SoC
+        a(href='#soc-1')
+          div.tag MetaEco SoC
         div.title(style='margin-bottom: 330px') 개발 제품
         div.sub-title 중소형 OLED Panel 용 SoC제품
         div(style='position: relative; width: 100%; margin-bottom: 174px')
@@ -64,5 +67,5 @@ html
             | E. sales@metacni.com
       div.footer-background
 
-
-  script
+  script(src='../assets/scripts/smooth-scroll.js')
+  script(src='../assets/scripts/common.js')
