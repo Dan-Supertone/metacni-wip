@@ -361,6 +361,8 @@ section.contact div.contact-bg-2.active {
   section.contact div.text {
     top: 80px;
     font-size: 28px;
+    width: 600px;
+    margin-left: -300px;
   }
   section.contact a.contact-us {
     bottom: 50px;
