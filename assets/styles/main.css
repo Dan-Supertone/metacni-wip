@@ -30,6 +30,10 @@ input:focus {
   outline: none;
 }
 
+img {
+  display: block;
+}
+
 @media (min-width: 1280px) {
   br.only-m {
     display: none;
@@ -51,7 +55,7 @@ section article {
 footer {
   position: relative;
   width: 100%;
-  height: 220px;
+  height: 200px;
 }
 footer article {
   display: flex;
@@ -105,7 +109,10 @@ footer div.footer-background {
 
 @media (max-width: 1000px) {
   footer {
-    height: 240px;
+    height: 146px;
+  }
+  footer article div.footer-inner:nth-child(1) {
+    width: 100%;
   }
   footer article div.footer-inner:nth-child(1) div.logo-wrap {
     top: 30px;
@@ -117,6 +124,9 @@ footer div.footer-background {
     left: 30px;
     font-size: 10px;
   }
+  footer article div.footer-inner:nth-child(2) {
+    width: 300px;
+  }
   footer article div.footer-inner:nth-child(2) div.info {
     bottom: 30px;
     right: 30px;
@@ -125,7 +135,8 @@ footer div.footer-background {
 }
 section.main {
   position: relative;
-  height: 1080px;
+  height: 920px;
+  max-height: 100vh;
 }
 section.main article div.logo-wrap {
   z-index: 1000;
@@ -187,20 +198,20 @@ section.main article div.main-bg-2 p {
 
 @media (max-width: 1000px) {
   section.main {
-    height: 600px;
+    height: 500px;
   }
   section.main article div.logo-wrap {
-    top: 40px;
-    left: 40px;
-    height: 32px;
+    top: 20px;
+    left: 20px;
+    height: 26px;
   }
   section.main article div.main-bg-1 p {
     bottom: 80px;
     right: 40px;
-    font-size: 36px;
+    font-size: 28px;
   }
   section.main article div.main-bg-2 p {
-    font-size: 40px;
+    font-size: 32px;
     text-shadow: 0px 14px 30px black;
   }
 }
@@ -289,19 +300,37 @@ section.what-we-do article div.block-wrap div.block div.block-inner p {
 }
 @media (max-width: 1000px) {
   section.what-we-do article {
-    padding: 120px 40px;
+    padding: 60px 40px;
   }
   section.what-we-do article div.title {
     font-size: 20px;
     width: 170px;
   }
   section.what-we-do article div.text {
-    font-size: 24px;
+    font-size: 16px;
+    margin: 12px 0 60px;
+  }
+  section.what-we-do article div.block-wrap a:nth-child(2) div.block {
+    margin: 26px auto;
+  }
+  section.what-we-do article div.block-wrap div.block {
+    height: 200px;
+  }
+  section.what-we-do article div.block-wrap div.block div.block-inner {
+    padding: 16px 0 20px 0;
+  }
+  section.what-we-do article div.block-wrap div.block div.block-inner h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  section.what-we-do article div.block-wrap div.block div.block-inner p {
+    font-size: 12px;
   }
 }
 section.contact {
   position: relative;
-  height: 1080px;
+  height: 920px;
+  max-height: 100vh;
   text-align: center;
 }
 section.contact div.text {
@@ -356,43 +385,44 @@ section.contact div.contact-bg-2.active {
 
 @media (max-width: 1000px) {
   section.contact {
-    height: 600px;
+    height: 400px;
   }
   section.contact div.text {
-    top: 80px;
-    font-size: 28px;
+    top: 50px;
+    font-size: 22px;
     width: 600px;
     margin-left: -300px;
   }
   section.contact a.contact-us {
-    bottom: 50px;
-    width: 160px;
-    font-size: 22px;
+    bottom: 30px;
+    width: 120px;
+    margin-left: -60px;
+    font-size: 18px;
   }
 }
 section.sub {
   background: #DDDDDD;
 }
 section.sub article {
-  padding: 344px 120px 204px 120px;
+  padding: 230px 120px 120px 120px;
   text-align: center;
 }
 section.sub article div.logo-wrap {
   position: absolute;
-  top: 50px;
-  left: 56px;
-  height: 30px;
+  top: 100px;
+  left: 60px;
+  height: 48px;
 }
 section.sub article div.logo-wrap img {
   height: 100%;
 }
 section.sub article div.tag {
   position: absolute;
-  top: 110px;
-  right: 50px;
-  width: 260px;
-  height: 60px;
-  padding-top: 11px;
+  top: 100px;
+  right: 60px;
+  width: 220px;
+  height: 50px;
+  padding-top: 6px;
   font-size: 26px;
   font-weight: 700;
   text-align: center;
@@ -400,51 +430,55 @@ section.sub article div.tag {
   background: #082AB7;
 }
 section.sub article div.title {
-  height: 76px;
-  margin-bottom: 76px;
+  margin-bottom: 90px;
 }
-section.sub article div.title img {
-  height: 100%;
+section.sub article div.title img.title {
+  height: 62px;
+  margin: 0 auto;
 }
-section.sub article div.title-sub {
-  font-size: 36px;
+section.sub article div.title div.title-sub {
+  font-size: 22px;
   font-weight: 400;
-  margin-bottom: 170px;
+  margin-top: 26px;
 }
 
 @media (max-width: 1000px) {
   section.sub article {
-    padding: 200px 40px 120px 40px;
+    padding: 120px 20px 80px 20px;
   }
   section.sub article div.logo-wrap {
-    top: 40px;
-    left: 40px;
-    height: 20px;
+    top: 24px;
+    left: 20px;
+    height: 22px;
   }
   section.sub article div.tag {
-    top: 90px;
-    right: 40px;
-    width: 180px;
-    height: 44px;
-    padding-top: 9px;
-    font-size: 18px;
+    top: 18px;
+    right: 20px;
+    width: 130px;
+    height: 28px;
+    padding-top: 3px;
+    font-size: 16px;
   }
   section.sub article div.title {
-    width: 100%;
-    height: auto;
+    margin-bottom: 60px;
   }
-  section.sub article div.title-sub {
-    font-size: 20px;
-    margin-bottom: 90px;
+  section.sub article div.title img.title {
+    height: 28px;
+    margin: 0 auto;
+  }
+  section.sub article div.title div.title-sub {
+    font-size: 14px;
+    margin-top: 14px;
   }
 }
 section.sub.soc-1 article div.title {
-  margin-bottom: 176px;
+  margin-bottom: 140px;
 }
 section.sub.soc-1 article div.box-soc-1-1 {
   width: 100%;
+  max-width: 1080px;
   padding: 0 40px;
-  margin: 0 auto 90px auto;
+  margin: 0 auto;
 }
 @media (max-width: 1000px) {
   section.sub.soc-1 article div.box-soc-1-1 {
@@ -454,7 +488,7 @@ section.sub.soc-1 article div.box-soc-1-1 {
 
 @media (max-width: 1000px) {
   section.sub.soc-1 article div.title {
-    margin-bottom: 90px;
+    margin-bottom: 80px;
   }
 }
 section.sub.soc-2 {
@@ -464,43 +498,41 @@ section.sub.soc-2 article div.tag {
   background: #0056A0;
 }
 section.sub.soc-2 article div.title {
-  font-size: 74px;
+  font-size: 56px;
   font-weight: 400;
-  color: #000;
-  margin-bottom: 328px;
+  color: #082AB7;
+  margin: 0 auto 150px auto;
 }
 section.sub.soc-2 article div.sub-title {
-  font-size: 38px;
+  font-size: 22px;
   font-weight: 700;
+  text-align: left;
   color: #A50000;
   border-bottom: solid 3px #A50000;
   padding-bottom: 16px;
   width: 570px;
 }
 section.sub.soc-2 article div.sub-title.soc-2-2 {
-  width: 990px;
+  width: 560px;
   margin-bottom: 160px;
 }
 section.sub.soc-2 article div.box-soc-2-1 {
   position: relative;
   width: 100%;
-  margin-bottom: 174px;
+  max-width: 1380px;
+  margin-bottom: 260px;
 }
 section.sub.soc-2 article div.box-soc-2-1 p {
   position: absolute;
-  top: 22px;
-  left: 24px;
-  font-size: 24px;
+  top: 16px;
+  left: 0px;
+  font-size: 22px;
   font-weight: 400;
   text-align: left;
 }
 section.sub.soc-2 article div.box-soc-2-2 {
   width: 100%;
-  margin-bottom: 400px;
-}
-section.sub.soc-2 article div.box-soc-2-3 {
-  width: 100%;
-  margin-bottom: 90px;
+  max-width: 1600px;
 }
 section.sub.soc-2 article div.img-soc-2-1 {
   width: 100%;
@@ -511,11 +543,11 @@ section.sub.soc-2 article div.img-soc-2-1 img {
 
 @media (max-width: 1000px) {
   section.sub.soc-2 article div.title {
-    font-size: 32px;
-    margin-bottom: 90px;
+    font-size: 26px;
+    margin-bottom: 80px;
   }
   section.sub.soc-2 article div.sub-title {
-    font-size: 18px;
+    font-size: 16px;
     width: 300px;
     margin-bottom: 40px;
   }
@@ -527,43 +559,65 @@ section.sub.soc-2 article div.img-soc-2-1 img {
     margin-bottom: 40px;
   }
   section.sub.soc-2 article div.box-soc-2-1 p {
-    top: -20px;
+    top: -26px;
     font-size: 12px;
   }
-  section.sub.soc-2 article div.box-soc-2-2 {
-    margin-bottom: 100px;
+}
+section.sub.soc-3 {
+  background: #E5E5E5;
+}
+section.sub.soc-3 article {
+  padding-top: 120px;
+}
+section.sub.soc-3 article div.sub-title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+  color: #A50000;
+  border-bottom: solid 3px #A50000;
+  padding-bottom: 16px;
+  width: 560px;
+  margin-bottom: 100px;
+}
+section.sub.soc-3 article div.box-soc-2-3 {
+  width: 100%;
+  max-width: 1500px;
+}
+
+@media (max-width: 1000px) {
+  section.sub.soc-3 article {
+    padding-top: 60px;
+  }
+  section.sub.soc-3 article div.sub-title {
+    font-size: 16px;
+    width: 260px;
+    margin-bottom: 50px;
   }
 }
 section.sub.ip-1 {
   background: #E3E3E3;
 }
 section.sub.ip-1 article div.tag {
-  background: #525252;
+  background: #082AB7;
 }
-section.sub.ip-1 article p.p-1 {
-  font-size: 38px;
-  font-weight: 700;
-  margin: 0 auto 118px auto;
+section.sub.ip-1 article img.img-1, section.sub.ip-1 article img.img-2, section.sub.ip-1 article img.img-4, section.sub.ip-1 article img.img-5 {
+  width: 100%;
+  margin: 0 auto;
 }
-section.sub.ip-1 article p.p-2 {
-  font-size: 38px;
-  font-weight: 700;
-  margin: 0 auto 366px auto;
-}
-section.sub.ip-1 article img.img-1 {
-  margin: 0 auto 140px auto;
+section.sub.ip-1 article img.img-1, section.sub.ip-1 article img.img-4, section.sub.ip-1 article img.img-5 {
+  max-width: 1080px;
 }
 section.sub.ip-1 article img.img-2 {
-  margin: 0 auto 54px auto;
+  max-width: 1360px;
 }
-section.sub.ip-1 article img.img-3 {
-  margin: 0 auto 54px auto;
+section.sub.ip-1 article img.img-1 {
+  margin-bottom: 40px;
+}
+section.sub.ip-1 article img.img-2 {
+  margin-bottom: 150px;
 }
 section.sub.ip-1 article img.img-4 {
-  margin: 0 auto 320px auto;
-}
-section.sub.ip-1 article img.img-5 {
-  margin: 0 auto 300px auto;
+  margin-bottom: 160px;
 }
 
 @media (max-width: 1000px) {
@@ -576,18 +630,12 @@ section.sub.ip-1 article img.img-5 {
     margin-bottom: 60px;
   }
   section.sub.ip-1 article img.img-1 {
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
   }
   section.sub.ip-1 article img.img-2 {
-    margin: 0 auto 20px auto;
-  }
-  section.sub.ip-1 article img.img-3 {
-    margin: 0 auto 20px auto;
-  }
-  section.sub.ip-1 article img.img-4 {
     margin: 0 auto 40px auto;
   }
-  section.sub.ip-1 article img.img-5 {
+  section.sub.ip-1 article img.img-4 {
     margin: 0 auto 40px auto;
   }
 }
@@ -597,67 +645,66 @@ section.sub.ip-2 {
 section.sub.ip-2 article div.tag {
   background: #0056A0;
 }
-section.sub.ip-2 article div.title {
-  margin-bottom: 160px;
+section.sub.ip-2 article div.title img.title {
+  height: 120px;
 }
-@media (max-width: 1000px) {
-  section.sub.ip-2 article div.title {
-    margin-bottom: 80px;
-  }
-}
-section.sub.ip-2 article div.title p {
-  font-size: 45px;
-  font-weight: 500px;
-  color: #003174;
-  margin-top: 14px;
-}
-@media (max-width: 1000px) {
-  section.sub.ip-2 article div.title p {
-    font-size: 20px;
-    margin-top: 7px;
-  }
+section.sub.ip-2 article img.img-1 {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+@media (max-width: 1000px) {
+  section.sub.ip-2 article div.title img.title {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
 section.sub.prod-1 {
   background: #EAEAEA;
 }
 section.sub.prod-1 article div.tag {
-  width: 320px;
+  width: 260px;
   background: #183182;
 }
 section.sub.prod-1 article div.title-sub {
   color: #183182;
 }
+section.sub.prod-1 article img.img-1 {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
 @media (max-width: 1000px) {
-  section.sub.prod-1 article div.tag {
-    width: 200px;
+  section.sub.prod-1 article img.img-1 {
+    width: 100%;
   }
 }
 section.sub.prod-2 {
-  background: #DEDEDE;
+  background: #EAEAEA;
 }
-section.sub.prod-2 article div.tag {
-  height: 95px;
-  background: #043174;
+section.sub.prod-2 article {
+  padding-top: 160px;
 }
-section.sub.prod-2 article div.title {
-  height: 180px;
-}
-section.sub.prod-2 article div.title-sub {
+section.sub.prod-2 article div.title div.title-sub {
   color: #043174;
 }
-section.sub.prod-2 article div.title-sub span {
+section.sub.prod-2 article div.title div.title-sub span {
   font-weight: 700;
   color: #A71F12;
 }
+section.sub.prod-2 article img.img-2 {
+  max-width: 1240px;
+  margin: 0 auto;
+}
 
 @media (max-width: 1000px) {
-  section.sub.prod-2 article div.tag {
-    height: 68px;
+  section.sub.prod-2 article {
+    padding-top: 20px;
   }
-  section.sub.prod-2 article div.title {
+  section.sub.prod-2 article img.img-2 {
     width: 100%;
-    height: auto;
   }
 }
