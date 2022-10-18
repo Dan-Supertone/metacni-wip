@@ -135,8 +135,8 @@ footer div.footer-background {
 }
 section.main {
   position: relative;
-  height: 920px;
-  max-height: 100vh;
+  height: 900px;
+  max-height: 80vh;
 }
 section.main article div.logo-wrap {
   z-index: 1000;
@@ -329,7 +329,7 @@ section.what-we-do article div.block-wrap div.block div.block-inner p {
 }
 section.contact {
   position: relative;
-  height: 920px;
+  height: 900px;
   max-height: 100vh;
   text-align: center;
 }
@@ -433,11 +433,11 @@ section.sub article div.title {
   margin-bottom: 90px;
 }
 section.sub article div.title img.title {
-  height: 62px;
+  height: 48px;
   margin: 0 auto;
 }
 section.sub article div.title div.title-sub {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
   margin-top: 26px;
 }
@@ -646,7 +646,7 @@ section.sub.ip-2 article div.tag {
   background: #0056A0;
 }
 section.sub.ip-2 article div.title img.title {
-  height: 120px;
+  height: 100px;
 }
 section.sub.ip-2 article img.img-1 {
   display: block;
@@ -665,15 +665,22 @@ section.sub.ip-2 article img.img-1 {
 section.sub.prod-1 {
   background: #EAEAEA;
 }
+section.sub.prod-1 article {
+  padding-top: 250px;
+}
 section.sub.prod-1 article div.tag {
   width: 260px;
   background: #183182;
+}
+section.sub.prod-1 article div.title {
+  margin-bottom: 40px;
 }
 section.sub.prod-1 article div.title-sub {
   color: #183182;
 }
 section.sub.prod-1 article img.img-1 {
-  max-width: 1100px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -696,6 +703,7 @@ section.sub.prod-2 article div.title div.title-sub span {
   color: #A71F12;
 }
 section.sub.prod-2 article img.img-2 {
+  width: 100%;
   max-width: 1240px;
   margin: 0 auto;
 }
