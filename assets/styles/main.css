@@ -686,6 +686,9 @@ section.sub.prod-1 article img.img-1 {
 }
 
 @media (max-width: 1000px) {
+  section.sub.prod-1 article {
+    padding-top: 120px;
+  }
   section.sub.prod-1 article img.img-1 {
     width: 100%;
   }
