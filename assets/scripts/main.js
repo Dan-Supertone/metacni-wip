@@ -1,10 +1,9 @@
 
 let imgTrans = false;
-
+let itemMain = document.getElementById('main-bg');
+let itemContact = document.getElementById('contact-bg');
 window.addEventListener('scroll', function() {
   if (imgTrans == false) {
-    let itemMain = document.getElementById('main-bg');
-    let itemContact = document.getElementById('contact-bg');
     let itemFooter = document.querySelector('footer');
     let posFromTop = itemFooter.getBoundingClientRect().top;
     let winH = window.innerHeight;
@@ -12,6 +11,14 @@ window.addEventListener('scroll', function() {
       itemMain.classList.add('active');
       itemContact.classList.add('active');
       imgTrans = true;
+    };
+  };
+  if (imgTrans == true) {
+    let posFromTopMain = itemMain.getBoundingClientRect().top;
+    if (posFromTopMain > -100) {
+      itemMain.classList.remove('active');
+      itemContact.classList.remove('active');
+      imgTrans = false;
     };
   };
 });

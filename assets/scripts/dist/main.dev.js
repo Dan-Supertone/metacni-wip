@@ -1,10 +1,10 @@
 "use strict";
 
 var imgTrans = false;
+var itemMain = document.getElementById('main-bg');
+var itemContact = document.getElementById('contact-bg');
 window.addEventListener('scroll', function () {
   if (imgTrans == false) {
-    var itemMain = document.getElementById('main-bg');
-    var itemContact = document.getElementById('contact-bg');
     var itemFooter = document.querySelector('footer');
     var posFromTop = itemFooter.getBoundingClientRect().top;
     var winH = window.innerHeight;
@@ -13,6 +13,20 @@ window.addEventListener('scroll', function () {
       itemMain.classList.add('active');
       itemContact.classList.add('active');
       imgTrans = true;
+    }
+
+    ;
+  }
+
+  ;
+
+  if (imgTrans == true) {
+    var posFromTopMain = itemMain.getBoundingClientRect().top;
+
+    if (posFromTopMain > -100) {
+      itemMain.classList.remove('active');
+      itemContact.classList.remove('active');
+      imgTrans = false;
     }
 
     ;
